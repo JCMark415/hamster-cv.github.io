@@ -1,0 +1,224 @@
+body {
+  /* default font*/
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  /* colors */
+  --background-color: rgb(50, 50, 50);
+  --splash-text-color: rgb(218, 171, 133);
+  --splash-shadow-color: rgba(51, 15, 15, 0.65);
+  --text-color: rgb(214, 167, 128);
+  --card-shadow-color: rgba(51, 15, 15, 0.65);
+  --border-color: rgb(214, 167, 128);
+  --header-footer-color: rgb(170, 100, 70);
+  --hovering-color: white;
+  --input-background-color: rgb(200, 175, 150);
+
+  margin: 0%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/****************   Nav Section **********************/
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+  background-color: var(--header-footer-color);
+  color: black;
+}
+
+nav p {
+  display: flexblock;
+  padding-inline: 10px;
+}
+
+/***********************  Footer Section   **************************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+
+  padding: 8px;
+  background-color: var(--header-footer-color);
+}
+
+/*********** Splash Page ************************/
+header {
+  display: flexbox;
+  justify-items: center;
+  flex-direction: column;
+
+  margin: 2%;
+  padding: 1%;
+
+  border-color: var(--border-color);
+  border-width: 2px;
+  border-radius: 20px;
+
+  background-image: url("../images/hamster_backsplash.jpg");
+  background-size: cover;
+  background-position: 5px;
+}
+
+header h1 {
+  display: flex;
+
+  text-shadow: 5px 5px 5px var(--splash-shadow-color);
+  color: var(--splash-text-color);
+
+  font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: Bold;
+}
+
+
+header img {
+  display: flex;
+  max-width: 25%;
+
+  box-shadow: 10px 10px 15px var(--splash-shadow-colorshadow-color);
+  border-radius: 20px;
+}
+
+.address {
+  text-decoration: line-through;
+}
+
+.tagline {
+  font-style: italic;
+}
+
+/************* Sections ********************/
+
+#section-grid {
+  display: grid;
+  margin: 1%;
+  margin-bottom: 2%;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 1%;
+}
+
+#section-grid section {
+  border-width: 1px;
+  border-color: var(--text-color);
+  border: solid;
+  border-radius: 25px;
+
+  padding-left: 2%;
+}
+
+section h3 {
+  color: var(--text-color);
+
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+section dl {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+section dt {
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+section ul {
+  font-variant: small-caps;
+  font-style: italic;
+}
+
+section a {
+  padding-left: 1%;
+  padding-right: 1%;
+
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+
+  border-color: var(--hoverable-color);
+  border-radius: 25px;
+  border: solid;
+}
+
+section a:hover {
+  background-color: var(--hovering-color);
+  font-style: italic;
+}
+
+/**************   Projects   *****************/
+.three-col {
+  display: grid;
+  margin: 1%;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  display: block;
+
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 1px;
+  border-radius: 10px;
+
+  padding: 5px;
+
+  box-shadow: 5px 5px 5px var(--card-shadow-color);
+}
+
+.card img {
+  display: flex;
+  max-width: 75%;
+  justify-self: center;
+  border-radius: 10px;
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+  nav {
+    flex-direction: column;
+    max-width: 10%;
+  }
+
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 1px;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5px;
+  justify-items: center;
+}
+
+input {
+  padding: 2px;
+  background-color: var(--input-background-color);
+}
+
+textarea {
+  margin: 10px;
+  min-width: 80%;
+  min-height: 10vh;
+  justify-items: top left;
+
+  font-style: italic;
+
+  background-color: var(--input-background-color);
+}
